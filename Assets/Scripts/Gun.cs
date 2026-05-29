@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
  
 public class Gun : MonoBehaviour
 {
@@ -12,15 +14,41 @@ public class Gun : MonoBehaviour
     private Transform bulletPivot;
     [SerializeField]
     private GameObject bulletPrefab;
-    public void GrabGun(Transform gunPosition)
+    private Text ammoText;
+    private float nextFireTime;
+    private int totalBullets;
+    private int cartridgeBullets;
+    private UnityEvent onGunEmpty = new UnityEvent();
+    public UnityEvent OnGunEmpty
     {
+        set => onGunEmpty = value;
+        get => onGunEmpty;
+    }
+    public void GrabGun(Transform gunPosition, Text bulletsText)
+    {
+        ammoText = bulletsText;
+        nextFireTime = 0f;
+        totalBullets = gunData.totalBullets;
         transform.SetParent(gunPosition);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         animator.Play("Grab", 0, 0f);
         rotateScript.canRotate = false;
         gameObject.GetComponent<Collider>().enabled = false;
+        ChargeGun(false);
      }
+     public void ChargeGun(bool playAnimation = true)
+    {
+        if (totalBullets <=0 || cartridgeBullets == gunData.cartridgeSize) return;
+        cartridgeBullets = Mathf.Min(gunData.cartridgeSize, totalBullets);
+        totalBullets -= cartridgeBullets;
+        if (playAnimation) animator.Play("Charge", 0, 0f);
+        UpdateAmmoText();
+    }
+    private void UpdateAmmoText()
+    {
+        ammoText.text = $"{cartridgeBullets} / {totalBullets}";
+    }
      public void Shoot()
     {
         float rayDistance = 1000f;
@@ -39,6 +67,33 @@ public class Gun : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletPivot.position, bulletPivot.rotation);
         bullet.transform.LookAt(targetPoint);
         animator.Play("Shoot", 0, 0f);
+    }
+    public void HandleFire(bool pressed, bool held)
+    {
+        if (gunData.gunType == GunType.Automatic)
+        {
+            if(held)
+            {
+                TryShoot();
+            }
+        }
+        else if(gunData.gunType == GunType.SemiAutomatic)
+        {
+            if(pressed)
+            {
+                TryShoot();
+            }
+        }
+    }
+    private void TryShoot()
+    {
+        if (cartridgeBullets > 0 && Time.time >= nextFireTime)
+        {
+            Shoot();
+            cartridgeBullets--;
+            UpdateAmmoText();
+            nextFireTime = Time.time + 1f / gunData.fireRate;
+        }
     }
 }
  
