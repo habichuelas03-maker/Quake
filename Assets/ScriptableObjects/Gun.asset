@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2919b3ca666a847930739a1dfc0bf5, type: 3}
   m_Name: Gun
   m_EditorClassIdentifier: Assembly-CSharp::GunData
-  demage: 10
+  damage: 10
   fireRate: 20
   totalBullets: 40
   reloadTime: 2

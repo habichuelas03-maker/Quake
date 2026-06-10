@@ -50,6 +50,13 @@ public class Gun : MonoBehaviour
     {
         ammoText.text = $"{cartridgeBullets} / {totalBullets}";
     }
+    private void DamageEnemy(GameObject enemy)
+    {
+        if (enemy.CompareTag("Enemy"))
+        {
+            enemy.GetComponent<Health>().TakeDamage(gunData.damage);
+        }
+    }
      public void Shoot()
     {
         float rayDistance = 1000f;
@@ -58,6 +65,7 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
         {
             targetPoint = hit.point;
+            DamageEnemy(hit.collider.gameObject);
         }
         else
         {
@@ -67,7 +75,7 @@ public class Gun : MonoBehaviour
         bulletPivot.forward = direction;
         GameObject bullet = Instantiate(bulletPrefab, bulletPivot.position, bulletPivot.rotation);
         bullet.transform.LookAt(targetPoint);
-        SoundManager.instance.Play(gunData.reloadSoundName);
+        SoundManager.instance.Play(gunData.shootSoundName);
         animator.Play("Shoot", 0, 0f);
     }
     public void HandleFire(bool pressed, bool held)
@@ -91,6 +99,7 @@ public class Gun : MonoBehaviour
     {
         if (totalBullets <= 0 && cartridgeBullets <=0)
         {
+            SoundManager.instance.Play(gunData.dropSoundName);
             onGunEmpty?.Invoke();
             return;
         }

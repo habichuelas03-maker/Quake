@@ -3,7 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GunData", menuName = "Scriptable Objects/GunData")]
 public class GunData : ScriptableObject
 {
-    public float demage;
+    public float damage;
     public float fireRate;
     public int totalBullets;
     public float reloadTime;
