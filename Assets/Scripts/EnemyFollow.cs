@@ -1,33 +1,28 @@
 using UnityEngine;
 using System.Collections;
  
-public class EnemyFollow : MonoBehaviour
+public class EnemyFollow : Enemy
 {
    [SerializeField]
    private float speed = 3f;
    [SerializeField]
    private float yPosition = 2f;
-   [SerializeField]
-   private float damage = 20f;
-   [SerializeField]
+   [SerializeField]  
    private float pushForce =5f;
-   private Transform player;
    private bool isFollowing = true;
-   private Animator animator;
-   private void Start ()
+   public override void OnEnable()
     {
-        animator = GetComponent<Animator>();
-        GetComponent<Health>().InitializeHealth();
+        base.OnEnable();
+        animator.Play("Appear", 0, 0f);
+        isFollowing = true;
+        SoundManager.instance.Play("monster_appear");
     }
-   private void OnEnable()
+    public override void TakeDamage()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
-    public void TakeDamage()
-    {
+        SoundManager.instance.Play("monster_demage");
         if(!isFollowing) return;
         isFollowing = false;
-        animator.Play("TakeDamage", 0, 0f);
+        base.TakeDamage();
         StartCoroutine(StopAndFollow());
     }
     private IEnumerator StopAndFollow()
@@ -36,19 +31,11 @@ public class EnemyFollow : MonoBehaviour
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
         isFollowing = true;
     }
-    public void Die()
+    public override void Die()
     {
-        StopAllCoroutines();
-        GetComponent<Collider>().enabled = false;
+        SoundManager.instance.Play("monster_die");
         isFollowing = false;
-        animator.Play("Death", 0, 0f);
-        StartCoroutine(DieCoroutine());
-    }
-    private IEnumerator DieCoroutine()
-    {
-        yield return null;
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        Destroy(gameObject);
+        base.Die();
     }
     private void Update()
     {
