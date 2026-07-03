@@ -1,28 +1,27 @@
 using UnityEngine;
 using System.Collections.Generic;
-
 public class Pool : MonoBehaviour
 {
     private Stack<GameObject> poolStack = new Stack<GameObject>();
     private readonly HashSet<GameObject> activeObjects = new HashSet<GameObject>();
-    private IReadOnlyCollection<GameObject> ActiveObjects => activeObjects;
+    public IReadOnlyCollection<GameObject> ActiveObjects => activeObjects;
     [SerializeField]
-
     private GameObject prefab;
-    public GameObject currentObject;
-    public GameObject Current => currentObject;
+    private GameObject currentObject;
+    public GameObject Prefab { set => prefab = value; }
+    public GameObject CurrentObject => currentObject;
     public void InstantiateObject(Vector3 position)
     {
         if (poolStack.Count > 0)
         {
-            currentObject =poolStack.Pop();
+            currentObject = poolStack.Pop();
             currentObject.transform.position = position;
             currentObject.SetActive(true);
         }
         else
         {
             currentObject = Instantiate(prefab, position, Quaternion.identity);
-            currentObject. AddComponent<PoolObject>().Pool = this;
+            currentObject.AddComponent<PoolObject>().Pool = this;
         }
         activeObjects.Add(currentObject);
     }
