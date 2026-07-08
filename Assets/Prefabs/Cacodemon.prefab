@@ -367,6 +367,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &4818086400133700724
 Animator:
   serializedVersion: 7
@@ -721,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b72a17878d17bc743b7eb036e0bb4032, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b72a17878d17bc743b7eb036e0bb4032, type: 3}
       propertyPath: m_Name
