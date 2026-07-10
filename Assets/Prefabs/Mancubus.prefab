@@ -250,6 +250,9 @@ MonoBehaviour:
   onDamageTaken:
     m_PersistentCalls:
       m_Calls: []
+  onHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4884640319423588108
 MonoBehaviour:
   m_ObjectHideFlags: 0
