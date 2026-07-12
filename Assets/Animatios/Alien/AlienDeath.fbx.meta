@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1c10cb9d2149fc3418cd88af16646149
+guid: c0dbb4ed31b14d544b9f27a4c08a8f12
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -31,11 +31,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Appear
+      name: Death
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 95
+      lastFrame: 117
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

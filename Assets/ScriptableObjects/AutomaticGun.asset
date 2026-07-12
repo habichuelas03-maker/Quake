@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2919b3ca666a847930739a1dfc0bf5, type: 3}
   m_Name: AutomaticGun
   m_EditorClassIdentifier: Assembly-CSharp::GunData
-  damage: 10
-  fireRate: 30
-  totalBullets: 60
-  reloadTime: 2
-  cartridgeSize: 10
-  gunType: 0
+  damage: 20
+  fireRate: 1
+  totalBullets: 20
+  reloadTime: 4
+  cartridgeSize: 1
+  gunType: 1
   shootSoundName: GUNMisc_Gun Shot Loud_PE111419
   reloadSoundName: Gun Clip Load
   dropSoundName: 13469 metal bouncy object falling-full
