@@ -262,13 +262,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6358647626922346213}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.9995803, z: 0, w: 0.028968563}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 201620060585456099}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -176.68, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 213}
@@ -327,6 +327,7 @@ GameObject:
   - component: {fileID: 938442598975082253}
   - component: {fileID: 2272547763109162249}
   - component: {fileID: 6243491465319568086}
+  - component: {fileID: 4307186792959221098}
   - component: {fileID: 6261407452798521751}
   - component: {fileID: 1648348973109277760}
   - component: {fileID: 1295980485788303971}
@@ -392,10 +393,25 @@ MonoBehaviour:
   animator: {fileID: 6261255543334700554}
   damage: 25
   range: 12
-  fireRate: 10
+  fireRate: 3
   aimTime: 4
   timerText: {fileID: 4565035083649623290}
-  laserBeam: {fileID: 3723354889896398874}
+  laserBeam: {fileID: 4307186792959221098}
+--- !u!114 &4307186792959221098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7725326015374661441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de6cd0da8c40a24ca5cd2ef9f0e7b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaserBeam
+  startPoint: {fileID: 5504876276101646000}
+  laserMesh: {fileID: 4697428860072654130}
+  radius: 0.05
 --- !u!114 &6261407452798521751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,7 +791,6 @@ GameObject:
   - component: {fileID: 4697428860072654130}
   - component: {fileID: 5242599660304920467}
   - component: {fileID: 1229190700366226587}
-  - component: {fileID: 3723354889896398874}
   m_Layer: 0
   m_Name: EnemyLaser
   m_TagString: Untagged
@@ -855,22 +870,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3723354889896398874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9004602349256833367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de6cd0da8c40a24ca5cd2ef9f0e7b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LaserBeam
-  startPoint: {fileID: 5504876276101646000}
-  target: {fileID: 0}
-  laserMesh: {fileID: 4697428860072654130}
-  radius: 0.1
 --- !u!1001 &147544085261248289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -917,15 +916,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0526f2c8c167d4948bbedc9101051151, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.030712796
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0526f2c8c167d4948bbedc9101051151, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0526f2c8c167d4948bbedc9101051151, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9995283
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0526f2c8c167d4948bbedc9101051151, type: 3}
       propertyPath: m_LocalRotation.z
@@ -937,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0526f2c8c167d4948bbedc9101051151, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -183.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0526f2c8c167d4948bbedc9101051151, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
