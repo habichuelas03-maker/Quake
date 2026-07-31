@@ -13,15 +13,17 @@ protected Transform player;
 private UnityEvent onDied = new UnityEvent();
 public UnityEvent OnDied => onDied;
 protected bool didWin = false;
+protected Rigidbody rb;
 protected Health playerHealth;
 private void Awake()
     {
+        rb = GetComponent<Rigidbody>();
         health = GetComponent<Health>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         playerHealth = player.GetComponent<Health>();
     }
     protected bool CheckWin()
-   {
+    {
         if (playerHealth.IsDead && !didWin)
         {
             StopAllCoroutines();
@@ -29,7 +31,8 @@ private void Awake()
             Dance();
         }
         return playerHealth.IsDead;
-    }    public virtual void OnEnable()
+    }
+    public virtual void OnEnable()
     {
         health.InitializeHealth();
         didWin = false;
