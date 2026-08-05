@@ -21,3 +21,4 @@ MonoBehaviour:
   shootSoundName: GUNMisc_Gun Shot Loud_PE111419
   reloadSoundName: Gun Clip Load
   dropSoundName: 13469 metal bouncy object falling-full
+  sprite: {fileID: 21300000, guid: ea6e9d44c17a6e34b8601be185cf78df, type: 3}
