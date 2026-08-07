@@ -17,7 +17,7 @@ MonoBehaviour:
   totalBullets: 20
   reloadTime: 4
   cartridgeSize: 1
-  gunType: 1
+  gunType: 0
   shootSoundName: GUNMisc_Gun Shot Loud_PE111419
   reloadSoundName: Gun Clip Load
   dropSoundName: 13469 metal bouncy object falling-full

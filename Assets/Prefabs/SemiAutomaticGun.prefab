@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6798528526819632398}
   - component: {fileID: 7115434856771712346}
   - component: {fileID: 273780760816924292}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_SciFi_Weapons_01-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 2557707199608787394}
   - component: {fileID: 6588163825884627358}
   - component: {fileID: 5092569677926158901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SemiAutomaticGun
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3169458309365295401}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00083299587, y: -0.7260726, z: 0.00067621446, w: 0.68761724}
+  m_LocalRotation: {x: -0.00083326857, y: -0.7260703, z: 0.0006810809, w: 0.6876196}
   m_LocalPosition: {x: 160.32, y: 1.83, z: 159.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -125,7 +125,7 @@ Transform:
   - {fileID: 75310715034719196}
   - {fileID: 5895892800688424939}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.009, y: -93.116, z: 0.123}
 --- !u!114 &2557707199608787394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +178,10 @@ MonoBehaviour:
   gunData: {fileID: 11400000, guid: c07e3bfd6801720459521ffa6e6dc3b5, type: 2}
   bulletPivot: {fileID: 5895892800688424939}
   bulletPrefab: {fileID: 610276331242779863, guid: 1264de41694be1f478a975ca0e13350d, type: 3}
+  fireParticlesPrefab: {fileID: 0}
+  aimLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &4867931494557664889
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 75310715034719196}
   - component: {fileID: 8087584716040890115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BasicGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +249,7 @@ GameObject:
   - component: {fileID: 7411169895970399974}
   - component: {fileID: 2356378679206352755}
   - component: {fileID: 4217912652247342548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_SciFi_Weapons_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5895892800688424939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletPivot
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}

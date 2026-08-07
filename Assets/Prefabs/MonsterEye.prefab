@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7581263871497921506}
   - component: {fileID: 46463381246839990}
   - component: {fileID: 3413097064234359368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4184954146306372309}
   - component: {fileID: 1523170242597050776}
   - component: {fileID: 6902839828399301750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 64247634029673843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 731167710053882745}
   - component: {fileID: 2606740022549016851}
   - component: {fileID: 7951164380862390209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3898530560592401730}
   - component: {fileID: 198600239700956295}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 1842455939501671091}
   - component: {fileID: 3517143900337807136}
   - component: {fileID: 4011531198731802051}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 5831782353781961911}
   - component: {fileID: 137178874128793756}
   - component: {fileID: 3049176369540162865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MonsterEye
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -623,6 +623,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onHealth:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8755744019844774129
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +635,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1011094336607430434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -723,9 +726,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 378286126945020640, guid: 0cc8b17f28bf6114895ea84bf3626ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0cc8b17f28bf6114895ea84bf3626ab7, type: 3}
       propertyPath: m_Name
       value: MonsterEyes
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0cc8b17f28bf6114895ea84bf3626ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414284597909644264, guid: 0cc8b17f28bf6114895ea84bf3626ab7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

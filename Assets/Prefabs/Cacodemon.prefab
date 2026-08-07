@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4050358771764497103}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1193178970971908470}
   - component: {fileID: 6166679890972857463}
   - component: {fileID: 5779083720630766063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4851878699467646746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7281062368584735125}
   - component: {fileID: 3422352973364781268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,7 +251,7 @@ GameObject:
   - component: {fileID: 183312991661897665}
   - component: {fileID: 4818086400133700724}
   - component: {fileID: 7052174864874733289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cacodemon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 2274881457380737342}
   - component: {fileID: 2355337043528895127}
   - component: {fileID: 5963696668147233106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 8821464802393121167}
   - component: {fileID: 3325323430963805345}
   - component: {fileID: 5948631930486326910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 1003268459311221957}
   - component: {fileID: 3151997284733448266}
   - component: {fileID: 8543766893847579594}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,6 +729,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b72a17878d17bc743b7eb036e0bb4032, type: 3}
       propertyPath: m_Name
       value: caco2_lpUV_t
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b72a17878d17bc743b7eb036e0bb4032, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
