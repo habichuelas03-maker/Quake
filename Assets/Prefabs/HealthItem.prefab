@@ -67,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be25ac91e114c74b941efe168900dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthItem
-  healAmount: 20
+  healAmount: 25
 --- !u!1001 &7434802717116613377
 PrefabInstance:
   m_ObjectHideFlags: 0

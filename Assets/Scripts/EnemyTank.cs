@@ -13,6 +13,7 @@ public class EnemyTank: Enemy
     private GameObject bulletPrefab;
     [SerializeField]
     private GameObject fireParticlesPrefab;
+    [SerializeField]
     private float speed = 10f;
     private bool isShooting = false;
     private float nextFireTime = 0f;
