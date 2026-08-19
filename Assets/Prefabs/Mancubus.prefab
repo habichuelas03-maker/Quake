@@ -267,11 +267,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyTank
   animator: {fileID: 1382979065650611490}
   damage: 20
-  range: 6
+  range: 7
   fireRate: 4
   shootPivot: {fileID: 1515344877518468150}
   bulletPrefab: {fileID: 610276331242779863, guid: 4da9bb408b4df964389345fae348aeb0, type: 3}
   fireParticlesPrefab: {fileID: 4021103657954561961, guid: 5c755f9bc5253ea418e919994537dcc7, type: 3}
+  speed: 10
 --- !u!65 &7754797640503863412
 BoxCollider:
   m_ObjectHideFlags: 0

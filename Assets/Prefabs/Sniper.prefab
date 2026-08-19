@@ -412,7 +412,7 @@ MonoBehaviour:
   startPoint: {fileID: 5504876276101646000}
   laserMesh: {fileID: 4697428860072654130}
   radius: 0.01
-  targetOffset: {x: 0, y: 1.46, z: 0}
+  targetOffset: {x: 0, y: 1.3, z: 0}
 --- !u!114 &6261407452798521751
 MonoBehaviour:
   m_ObjectHideFlags: 0
